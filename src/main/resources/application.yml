@@ -1,23 +1,10 @@
-# Spring properties
-spring:
-  application:
-    name: edge-service  # Service registers under this name
-
 zuul:
-  #ignoredServices: '*'
   routes:
-    greetings:
+    my-service:
       path: /pilae/**
       serviceId: PILAE-SERVICE
-      stripPrefix: false
-      #url: https://pilaeaplication.herokuapp.com/pilae
 
-# Discovery Server Access
 eureka:
   client:
-    registerWithEureka: false
     serviceUrl:
       defaultZone: https://pilae.herokuapp.com/eureka
-
-server:
-  port: 8181   # HTTP (Tomcat) port
