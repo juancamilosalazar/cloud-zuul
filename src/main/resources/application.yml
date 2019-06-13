@@ -10,7 +10,7 @@ zuul:
       path: /pilae/**
       serviceId: PILAE-SERVICE
       stripPrefix: false
-      #url: http://localhost:2222/greeting/
+      #url: https://pilaeaplication.herokuapp.com/pilae
 
 # Discovery Server Access
 eureka:
