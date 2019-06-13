@@ -3,7 +3,6 @@ spring:
   application:
     name: edge-service  # Service registers under this name
 
-
 zuul:
   #ignoredServices: '*'
   routes:
@@ -13,14 +12,12 @@ zuul:
       stripPrefix: false
       #url: http://localhost:2222/greeting/
 
-
 # Discovery Server Access
 eureka:
   client:
     registerWithEureka: false
     serviceUrl:
       defaultZone: https://pilae.herokuapp.com/eureka
-
 
 server:
   port: 8181   # HTTP (Tomcat) port
