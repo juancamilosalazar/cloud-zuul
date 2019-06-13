@@ -1,0 +1,26 @@
+# Spring properties
+spring:
+  application:
+    name: edge-service  # Service registers under this name
+
+
+zuul:
+  #ignoredServices: '*'
+  routes:
+    greetings:
+      path: /pilae/**
+      serviceId: PILAE-SERVICE
+      stripPrefix: false
+      #url: http://localhost:2222/greeting/
+
+
+# Discovery Server Access
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+server:
+  port: 8181   # HTTP (Tomcat) port
